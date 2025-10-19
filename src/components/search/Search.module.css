@@ -1,0 +1,57 @@
+.searchContainer {
+    position: relative;
+    width: 300px;
+}
+
+.searchInput {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-border);
+    font-size: 1rem;
+}
+
+.resultsList {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--color-background);
+    border: 1px solid var(--color-border);
+    border-top: none;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 10;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.resultsList li a {
+    display: block;
+    padding: 0.75rem 1 rem;
+    transition: background-color 0.2s ease;
+}
+
+.resultsList li a:hover {
+    background-color: var(--color-secondary);
+}
+
+.spinner {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border: 2px solid var (--color-border);
+    border-top-color: var(--color-primary);
+    border-radius: 50%;
+    animation: spin is linear infinite;
+}
+
+@keyframes spin {
+    to{
+        transform: translateY(-50%) rotate(360deg);
+    }
+}
